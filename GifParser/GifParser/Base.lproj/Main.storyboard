@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="T12-NO-tBQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="giU-1n-dMA">
+            <objects>
+                <tableViewController id="Jt8-EV-4tr" customClass="ListTableViewController" customModule="GifParser" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eiS-GL-uIB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="BwA-do-7My">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BwA-do-7My" id="Ci9-sY-pB0">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Jt8-EV-4tr" id="4vT-Js-DWj"/>
+                            <outlet property="delegate" destination="Jt8-EV-4tr" id="Ye5-iv-F3P"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="82p-en-6cT"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yga-D9-FsQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="109"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5i9-IA-E5O">
+            <objects>
+                <navigationController id="T12-NO-tBQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iGv-M7-FmU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Jt8-EV-4tr" kind="relationship" relationship="rootViewController" id="mnW-hx-9l2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ztx-rf-s2N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-878" y="109"/>
+        </scene>
+        <!--Gif AnalysisVC-->
+        <scene sceneID="jm3-9f-ZxC">
+            <objects>
+                <viewController storyboardIdentifier="GifAnalysisVC" id="vle-uH-HCK" customClass="GifAnalysisVC" customModule="GifParser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ayk-II-6Di"/>
+                        <viewControllerLayoutGuide type="bottom" id="HHh-Re-BAs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pcS-KO-jqF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sj5-we-H3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-879" y="-718"/>
+        </scene>
+        <!--Gif SynthesisVC-->
+        <scene sceneID="XyX-r3-bXI">
+            <objects>
+                <viewController storyboardIdentifier="GifSynthesisVC" id="Stb-Ll-Lej" customClass="GifSynthesisVC" customModule="GifParser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0MV-L2-ZGp"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nug-RO-bEu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RXn-i8-YUi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LtZ-Tc-3Wp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="-718"/>
+        </scene>
+        <!--Gif PlayVC-->
+        <scene sceneID="Wx6-KT-EAT">
+            <objects>
+                <viewController storyboardIdentifier="GifPlayVC" id="HC5-cm-YW8" customClass="GifPlayVC" customModule="GifParser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aid-1Z-pVg"/>
+                        <viewControllerLayoutGuide type="bottom" id="yos-uI-85K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6vd-pI-4sX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jOG-19-QRo">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="PH5-cZ-G8b"/>
+                                    <constraint firstAttribute="width" constant="240" id="pzY-xd-eYk"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jOG-19-QRo" firstAttribute="centerY" secondItem="6vd-pI-4sX" secondAttribute="centerY" id="Wzd-lT-lB3"/>
+                            <constraint firstItem="jOG-19-QRo" firstAttribute="centerX" secondItem="6vd-pI-4sX" secondAttribute="centerX" id="x1a-lg-LvM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="jOG-19-QRo" id="ZTD-lG-mRT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jx0-tJ-yod" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1036" y="-718"/>
+        </scene>
+    </scenes>
+</document>

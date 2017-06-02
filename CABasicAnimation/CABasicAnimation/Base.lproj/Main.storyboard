@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3Cp-vU-LSO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="T9s-57-1xE">
+            <objects>
+                <tableViewController id="9Xf-wg-gdI" customClass="ListTableViewController" customModule="CABasicAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dMX-AX-XfQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="42p-HJ-J4Q">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="42p-HJ-J4Q" id="dEW-Lx-TaU">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9Xf-wg-gdI" id="xVK-Y9-KpO"/>
+                            <outlet property="delegate" destination="9Xf-wg-gdI" id="nSR-BA-jnL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="k62-l1-Aql"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0L5-Pd-5v7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289" y="384"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f6r-CV-8wI">
+            <objects>
+                <navigationController id="3Cp-vU-LSO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jmb-gw-i4A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9Xf-wg-gdI" kind="relationship" relationship="rootViewController" id="4z4-Cd-ABH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="th1-1X-Lf3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-663" y="384"/>
+        </scene>
+        <!--Translate AnimationVC-->
+        <scene sceneID="TuX-ew-7Y1">
+            <objects>
+                <viewController storyboardIdentifier="TranslateAnimationVC" id="e6R-As-FrQ" customClass="TranslateAnimationVC" customModule="CABasicAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8NP-7m-Bek"/>
+                        <viewControllerLayoutGuide type="bottom" id="NKf-ev-eYA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l6X-n5-4UE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUV-DG-MFd">
+                                <rect key="frame" x="109" y="85" width="156" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.064200947709999998" blue="0.020345079219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4vf-4c-p7Y"/>
+                                    <constraint firstAttribute="width" constant="156" id="VUp-fL-RUz"/>
+                                </constraints>
+                                <state key="normal" title="Tap"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="sUV-DG-MFd" secondAttribute="trailing" constant="94" id="07X-6h-D3h"/>
+                            <constraint firstItem="sUV-DG-MFd" firstAttribute="top" secondItem="8NP-7m-Bek" secondAttribute="bottom" constant="65" id="1gv-rK-mej"/>
+                            <constraint firstItem="sUV-DG-MFd" firstAttribute="leading" secondItem="l6X-n5-4UE" secondAttribute="leadingMargin" constant="93" id="BNk-NA-7bQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnTap" destination="sUV-DG-MFd" id="e8D-QU-i4n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ATC-LD-tDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288.80000000000001" y="-301.79910044977515"/>
+        </scene>
+        <!--Shadow Offset AnimationVC-->
+        <scene sceneID="mT6-Cq-dDJ">
+            <objects>
+                <viewController storyboardIdentifier="ShadowOffsetAnimationVC" id="0yg-aV-ffj" customClass="ShadowOffsetAnimationVC" customModule="CABasicAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="09z-Hk-WLf"/>
+                        <viewControllerLayoutGuide type="bottom" id="SeU-sf-RlS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DzY-Dj-Ezf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ti8-E3-bdi">
+                                <rect key="frame" x="109" y="85" width="156" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.064200947709999998" blue="0.020345079219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="Een-Ky-ytY"/>
+                                    <constraint firstAttribute="height" constant="30" id="cFW-hz-cik"/>
+                                </constraints>
+                                <state key="normal" title="Tap"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ti8-E3-bdi" firstAttribute="top" secondItem="09z-Hk-WLf" secondAttribute="bottom" constant="65" id="6p9-Wo-4E7"/>
+                            <constraint firstItem="ti8-E3-bdi" firstAttribute="leading" secondItem="DzY-Dj-Ezf" secondAttribute="leadingMargin" constant="93" id="OTD-Fc-Y41"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ti8-E3-bdi" secondAttribute="trailing" constant="94" id="eFe-iI-OZ4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnTap" destination="ti8-E3-bdi" id="3z9-9U-qvb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wja-Ig-Rjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288.80000000000001" y="-301.79910044977515"/>
+        </scene>
+        <!--Color And Opacity AnimationVC-->
+        <scene sceneID="pPz-27-8Yu">
+            <objects>
+                <viewController storyboardIdentifier="ColorAndOpacityAnimationVC" id="ytw-5e-0Pt" customClass="ColorAndOpacityAnimationVC" customModule="CABasicAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mvq-9V-I9j"/>
+                        <viewControllerLayoutGuide type="bottom" id="no4-LB-XQC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eYN-ns-Pfm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXD-2q-ddH">
+                                <rect key="frame" x="109" y="85" width="156" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.064200947709999998" blue="0.020345079219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="2QQ-4f-AXY"/>
+                                    <constraint firstAttribute="height" constant="30" id="dUd-eC-2yC"/>
+                                </constraints>
+                                <state key="normal" title="Tap"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MXD-2q-ddH" firstAttribute="leading" secondItem="eYN-ns-Pfm" secondAttribute="leadingMargin" constant="93" id="B6N-V1-ToU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MXD-2q-ddH" secondAttribute="trailing" constant="94" id="Upd-Jp-BRd"/>
+                            <constraint firstItem="MXD-2q-ddH" firstAttribute="top" secondItem="Mvq-9V-I9j" secondAttribute="bottom" constant="65" id="nkT-Tp-bxO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnTap" destination="MXD-2q-ddH" id="7Zg-iU-o3V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nQd-om-bwu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288.80000000000001" y="-301.79910044977515"/>
+        </scene>
+        <!--Border AnimationVC-->
+        <scene sceneID="1zA-wB-j3V">
+            <objects>
+                <viewController storyboardIdentifier="BorderAnimationVC" id="jDg-3N-Hxy" customClass="BorderAnimationVC" customModule="CABasicAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y3R-wn-wZj"/>
+                        <viewControllerLayoutGuide type="bottom" id="xOz-uH-xG1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zq4-hP-PuO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgm-tD-Z4X">
+                                <rect key="frame" x="109" y="85" width="156" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.064200947709999998" blue="0.020345079219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Y4L-dG-ndD"/>
+                                    <constraint firstAttribute="width" constant="156" id="eCo-aU-HH9"/>
+                                </constraints>
+                                <state key="normal" title="Tap"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jgm-tD-Z4X" firstAttribute="top" secondItem="Y3R-wn-wZj" secondAttribute="bottom" constant="65" id="RLF-J9-lJA"/>
+                            <constraint firstItem="Jgm-tD-Z4X" firstAttribute="leading" secondItem="zq4-hP-PuO" secondAttribute="leadingMargin" constant="93" id="hrR-xa-HtS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jgm-tD-Z4X" secondAttribute="trailing" constant="94" id="rT2-vx-OcT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnTap" destination="Jgm-tD-Z4X" id="WUn-Zl-O6X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4n6-XH-r1D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288.80000000000001" y="-301.79910044977515"/>
+        </scene>
+        <!--Corner Radius AnimationVC-->
+        <scene sceneID="Qyc-3W-HQh">
+            <objects>
+                <viewController storyboardIdentifier="CornerRadiusAnimationVC" id="eMI-a0-pNP" customClass="CornerRadiusAnimationVC" customModule="CABasicAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lzB-uX-hnv"/>
+                        <viewControllerLayoutGuide type="bottom" id="DTF-pe-gws"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ti3-B8-yNa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLU-ft-2rT">
+                                <rect key="frame" x="109" y="85" width="156" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.064200947709999998" blue="0.020345079219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="KnB-bb-p2V"/>
+                                    <constraint firstAttribute="height" constant="30" id="NWN-nf-dOY"/>
+                                </constraints>
+                                <state key="normal" title="Tap"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KLU-ft-2rT" firstAttribute="leading" secondItem="ti3-B8-yNa" secondAttribute="leadingMargin" constant="93" id="8k5-aA-UNj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KLU-ft-2rT" secondAttribute="trailing" constant="94" id="Aiw-2u-2OP"/>
+                            <constraint firstItem="KLU-ft-2rT" firstAttribute="top" secondItem="lzB-uX-hnv" secondAttribute="bottom" constant="65" id="Qnp-Nh-YxP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnTap" destination="KLU-ft-2rT" id="RqA-Hs-YEh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tve-u8-Dce" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288.80000000000001" y="-301.79910044977515"/>
+        </scene>
+        <!--Scale AnimationVC-->
+        <scene sceneID="yIi-GG-gMx">
+            <objects>
+                <viewController storyboardIdentifier="ScaleAnimationVC" id="wfv-As-LFX" customClass="ScaleAnimationVC" customModule="CABasicAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wbl-0Y-lhm"/>
+                        <viewControllerLayoutGuide type="bottom" id="s9o-vc-ZJl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TeU-BR-yUc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSM-QS-a9Y">
+                                <rect key="frame" x="109" y="85" width="156" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.064200947709999998" blue="0.020345079219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="lcO-3o-iWK"/>
+                                    <constraint firstAttribute="height" constant="30" id="mlw-cM-jk7"/>
+                                </constraints>
+                                <state key="normal" title="Tap"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="PSM-QS-a9Y" secondAttribute="trailing" constant="94" id="3HP-OG-BQ4"/>
+                            <constraint firstItem="PSM-QS-a9Y" firstAttribute="top" secondItem="wbl-0Y-lhm" secondAttribute="bottom" constant="65" id="LW1-6h-OAw"/>
+                            <constraint firstItem="PSM-QS-a9Y" firstAttribute="leading" secondItem="TeU-BR-yUc" secondAttribute="leadingMargin" constant="93" id="kXh-Ml-fjA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnTap" destination="PSM-QS-a9Y" id="AnN-cH-BFS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pAl-uT-aQc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288.80000000000001" y="-301.79910044977515"/>
+        </scene>
+        <!--Rotation AnimationVC-->
+        <scene sceneID="9Db-cz-7Rl">
+            <objects>
+                <viewController storyboardIdentifier="RotationAnimationVC" id="Jab-D2-mGT" customClass="RotationAnimationVC" customModule="CABasicAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iO1-by-Rdg"/>
+                        <viewControllerLayoutGuide type="bottom" id="lai-eG-qVV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gIG-5B-R59">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJL-T9-4Nm">
+                                <rect key="frame" x="109" y="85" width="156" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.064200947709999998" blue="0.020345079219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MPL-H9-dzd"/>
+                                    <constraint firstAttribute="width" constant="156" id="Pqz-6Y-E7x"/>
+                                </constraints>
+                                <state key="normal" title="Tap"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PJL-T9-4Nm" firstAttribute="top" secondItem="iO1-by-Rdg" secondAttribute="bottom" constant="65" id="MP6-xK-8kb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PJL-T9-4Nm" secondAttribute="trailing" constant="94" id="dwc-6U-Wbz"/>
+                            <constraint firstItem="PJL-T9-4Nm" firstAttribute="leading" secondItem="gIG-5B-R59" secondAttribute="leadingMargin" constant="93" id="qRG-3K-LIf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnTap" destination="PJL-T9-4Nm" id="puL-Y8-VYE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="thP-Hf-ffL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288.80000000000001" y="-301.79910044977515"/>
+        </scene>
+    </scenes>
+</document>

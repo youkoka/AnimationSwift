@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="apO-Cb-L6G">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="HB2-nl-eL8">
+            <objects>
+                <tableViewController id="WEP-QF-QdV" customClass="ListTableViewController" customModule="UIViewAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mTV-r7-KYS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="0IK-15-uez">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0IK-15-uez" id="lWe-W8-t6X">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WEP-QF-QdV" id="JzE-My-Vwf"/>
+                            <outlet property="delegate" destination="WEP-QF-QdV" id="8N7-8w-oBs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="98N-BO-mIT"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jX0-CQ-NSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="425" y="418"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="D55-dT-pfA">
+            <objects>
+                <navigationController id="apO-Cb-L6G" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="d3d-Zu-PZS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WEP-QF-QdV" kind="relationship" relationship="rootViewController" id="zJW-E1-a9u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HSd-1F-OjW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-527" y="418"/>
+        </scene>
+        <!--Move AnimationVC-->
+        <scene sceneID="gwj-Db-XCu">
+            <objects>
+                <viewController storyboardIdentifier="MoveAnimationVC" id="lq8-SG-pn6" customClass="MoveAnimationVC" customModule="UIViewAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Akx-lR-LEk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y6l-Tt-nW8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mnz-Rh-6UK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Od-ws-OrQ">
+                                <rect key="frame" x="16" y="20" width="160" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.059675377910000001" blue="0.13331893689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Tap1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOG-ZJ-dHF">
+                                <rect key="frame" x="199" y="20" width="160" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.059675377910000001" blue="0.13331893689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Tap2"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Od-ws-OrQ" firstAttribute="top" secondItem="Akx-lR-LEk" secondAttribute="bottom" id="4vG-mD-YzM"/>
+                            <constraint firstItem="TOG-ZJ-dHF" firstAttribute="trailing" secondItem="Mnz-Rh-6UK" secondAttribute="trailingMargin" id="BIA-Ep-wYs"/>
+                            <constraint firstItem="TOG-ZJ-dHF" firstAttribute="width" secondItem="Mnz-Rh-6UK" secondAttribute="width" multiplier="160/375" id="EPP-58-fT1"/>
+                            <constraint firstItem="1Od-ws-OrQ" firstAttribute="leading" secondItem="Mnz-Rh-6UK" secondAttribute="leadingMargin" id="N5y-GK-ZSY"/>
+                            <constraint firstItem="1Od-ws-OrQ" firstAttribute="width" secondItem="Mnz-Rh-6UK" secondAttribute="width" multiplier="160/375" id="e0c-7g-OcS"/>
+                            <constraint firstItem="TOG-ZJ-dHF" firstAttribute="top" secondItem="Akx-lR-LEk" secondAttribute="bottom" id="e6R-Kc-Ozz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tap1" destination="1Od-ws-OrQ" id="7V3-4s-n6W"/>
+                        <outlet property="tap2" destination="TOG-ZJ-dHF" id="hvw-n0-Trf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MkE-Bk-ty5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424.80000000000001" y="-264.01799100449779"/>
+        </scene>
+        <!--Size Center AnimationVC-->
+        <scene sceneID="Hcw-xB-n13">
+            <objects>
+                <viewController storyboardIdentifier="SizeCenterAnimationVC" id="iwV-0g-BpX" customClass="SizeCenterAnimationVC" customModule="UIViewAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pTj-7f-S0S"/>
+                        <viewControllerLayoutGuide type="bottom" id="H6g-5g-FyM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qtM-n0-dMK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4i-ZW-et6">
+                                <rect key="frame" x="164" y="20" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.059675377910000001" blue="0.13331893689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MtZ-5T-C0N"/>
+                                    <constraint firstAttribute="width" constant="46" id="lZJ-WZ-5ed"/>
+                                </constraints>
+                                <state key="normal" title="Tap"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o4i-ZW-et6" firstAttribute="top" secondItem="pTj-7f-S0S" secondAttribute="bottom" id="IlC-pm-xaV"/>
+                            <constraint firstItem="o4i-ZW-et6" firstAttribute="centerX" secondItem="qtM-n0-dMK" secondAttribute="centerX" id="NSG-5J-sJ5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnTap" destination="o4i-ZW-et6" id="eAy-J7-hRi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IhN-rK-8gG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-236" y="-264"/>
+        </scene>
+        <!--Alpha Color AnimationVC-->
+        <scene sceneID="Ik1-fy-1KQ">
+            <objects>
+                <viewController storyboardIdentifier="AlphaColorAnimationVC" id="7RL-yU-Eb3" customClass="AlphaColorAnimationVC" customModule="UIViewAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aF0-7V-7oQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="NNm-V1-A2u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Ok-nS-YdI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCq-Tj-wa9">
+                                <rect key="frame" x="96" y="97" width="183" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.059675377910000001" blue="0.13331893689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Tap"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bCq-Tj-wa9" firstAttribute="leading" secondItem="8Ok-nS-YdI" secondAttribute="leadingMargin" constant="80" id="BlZ-AM-Qef"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bCq-Tj-wa9" secondAttribute="trailing" constant="80" id="Mi9-vq-kpO"/>
+                            <constraint firstItem="bCq-Tj-wa9" firstAttribute="top" secondItem="aF0-7V-7oQ" secondAttribute="bottom" constant="77" id="gt4-tk-qIY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnTap" destination="bCq-Tj-wa9" id="7YD-3t-kkP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="699-Lx-xuq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-930.39999999999998" y="-326.08695652173918"/>
+        </scene>
+        <!--Transalte Rotate ScaleVC-->
+        <scene sceneID="19C-SR-mo2">
+            <objects>
+                <viewController storyboardIdentifier="TransalteRotateScaleVC" id="Fsl-Is-jiN" customClass="TransalteRotateScaleVC" customModule="UIViewAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BHN-km-PvT"/>
+                        <viewControllerLayoutGuide type="bottom" id="I1v-GP-1OO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jHe-RD-bsO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6o4-sl-qeg">
+                                <rect key="frame" x="69" y="130" width="237" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.059675377910000001" blue="0.13331893689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Tap"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6o4-sl-qeg" firstAttribute="leading" secondItem="jHe-RD-bsO" secondAttribute="leadingMargin" constant="53" id="UCH-Fk-rKq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6o4-sl-qeg" secondAttribute="trailing" constant="53" id="uFi-ix-BNe"/>
+                            <constraint firstItem="6o4-sl-qeg" firstAttribute="top" secondItem="BHN-km-PvT" secondAttribute="bottom" constant="110" id="zZ6-bs-Jc8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnTap" destination="6o4-sl-qeg" id="ehw-ti-hAt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ir-fl-qgl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1407.2" y="36.431784107946029"/>
+        </scene>
+        <!--Simple Rotate DelegateVC-->
+        <scene sceneID="caA-p3-0VS">
+            <objects>
+                <viewController storyboardIdentifier="SimpleRotateDelegateVC" id="xcU-T3-VK2" customClass="SimpleRotateDelegateVC" customModule="UIViewAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Yr-41-9Dv"/>
+                        <viewControllerLayoutGuide type="bottom" id="GeG-hf-AdX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kBX-yZ-qXp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whn-dw-Slo">
+                                <rect key="frame" x="106" y="125" width="162" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.059675377910000001" blue="0.13331893689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Tap"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Whn-dw-Slo" firstAttribute="leading" secondItem="kBX-yZ-qXp" secondAttribute="leadingMargin" constant="90" id="HAg-ZA-30k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Whn-dw-Slo" secondAttribute="trailing" constant="91" id="QaG-9F-KXf"/>
+                            <constraint firstItem="Whn-dw-Slo" firstAttribute="top" secondItem="3Yr-41-9Dv" secondAttribute="bottom" constant="105" id="hQw-LV-4uF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnTap" destination="Whn-dw-Slo" id="V7B-LC-GhB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rm7-aM-Vnk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-804" y="-1008.8455772113944"/>
+        </scene>
+        <!--Plane KeyframeVC-->
+        <scene sceneID="yhI-db-Mkp">
+            <objects>
+                <viewController storyboardIdentifier="PlaneKeyframeVC" id="f1A-kj-GCt" customClass="PlaneKeyframeVC" customModule="UIViewAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BV6-Lr-b0g"/>
+                        <viewControllerLayoutGuide type="bottom" id="nQ8-UG-sTA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CdZ-IU-8g9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kKV-uY-ra8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Turntable KeyframeVC-->
+        <scene sceneID="jZa-TJ-znb">
+            <objects>
+                <viewController storyboardIdentifier="TurntableKeyframeVC" id="Xe7-6E-aIj" customClass="TurntableKeyframeVC" customModule="UIViewAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8tm-gX-NPP"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZYn-3L-jzw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BB0-Yl-ILM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="turntable" translatesAutoresizingMaskIntoConstraints="NO" id="6ch-qi-7bl">
+                                <rect key="frame" x="37" y="183" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="hBJ-pj-EZg"/>
+                                    <constraint firstAttribute="height" constant="300" id="hCo-Io-Fdy"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6ch-qi-7bl" firstAttribute="centerX" secondItem="BB0-Yl-ILM" secondAttribute="centerX" id="s7n-5n-Y6N"/>
+                            <constraint firstItem="6ch-qi-7bl" firstAttribute="centerY" secondItem="BB0-Yl-ILM" secondAttribute="centerY" id="v6e-fa-KKe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="turntable" destination="6ch-qi-7bl" id="x00-En-Asv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tt0-gi-A3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="-947"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="turntable" width="344" height="344"/>
+    </resources>
+</document>
