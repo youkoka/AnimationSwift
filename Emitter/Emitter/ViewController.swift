@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         
         let emitterCell = CAEmitterCell();
         emitterCell.name = "emitter";
-        emitterCell.emissionLongitude = CGFloat.pi;
+//        emitterCell.emissionLongitude = CGFloat.pi;
         emitterCell.emissionRange = CGFloat.pi;
         emitterCell.velocity = 1;
         emitterCell.velocityRange = 100;
